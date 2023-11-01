@@ -19,6 +19,8 @@ let keys = Object.keys(sounds);
 let pressedBtnsKeyCodes = [];
 let timings = [];
 let isRecording = false;
+let isPlaying = false;
+
 
 function keyPressHandle(keyCode) {
     let button;
@@ -40,22 +42,17 @@ function keyPressHandle(keyCode) {
     });
 }
 
-
-function onPlaySound(key) {
-    let audio = new Audio(sounds[key]);
-    audio.autoplay = true;
-    audio.play();
-};
-
-
-function recordHandler() {
+function onRecordHandler() {
     if (isRecording) {
         isRecording = false;
+        recordButton.classList.remove("active");
         return;
     } else {
         pressedBtnsKeyCodes = [];
         timings = [];
         isRecording = true;
+        recordButton.classList.add("active");
+        playButton.classList.remove("active");
     }
 }
 
@@ -65,15 +62,15 @@ function onRecord(keyCode) {
 }
 
 function onPlayRecord() {
-    isRecording = false;
     let finalTimeout = 0;
     let timeDifferences = onCalcTimeDiffs(timings);
-    playButton.classList.add("active");
 
-    if (timings.length === 0) {
-        playButton.classList.remove("active");
+    if (timings.length === 0 || isPlaying) {
         return;
-    };
+    }
+
+    isPlaying = true;
+    playButton.classList.add("active");
 
     for (let i = 0; i < timeDifferences.length; i++) {
         finalTimeout += timeDifferences[i];
@@ -85,6 +82,7 @@ function onPlayRecord() {
 
     setTimeout(() => {
         playButton.classList.remove("active");
+        isPlaying = false;
     }, finalTimeout + 0.4);
 }
 
@@ -100,19 +98,21 @@ function onCalcTimeDiffs(timeArray) {
     return newArray;
 }
 
+function onPlaySound(key) {
+    let audio = new Audio(sounds[key]);
+    audio.autoplay = true;
+    audio.play();
+};
+
 
 // for keyboard
 document.addEventListener("keydown", (e) => {
     keyPressHandle(e.code);
 
     if (e.code === "KeyR") {
-        recordHandler();
-        if (isRecording) {
-            recordButton.classList.add("active");
-        } else {
-            recordButton.classList.remove("active");
-        }
+        onRecordHandler();
     } else if (e.code === "KeyP") {
+        // onPlayHandler();
         onPlayRecord();
     }
 });
@@ -135,7 +135,8 @@ document.addEventListener('click', (e) => {
 })
 
 recordButton.addEventListener('click', () => {
-    recordHandler();
+    onRecordHandler();
+    playButton.classList.remove("active");
 
     isRecording
         ? recordButton.classList.add("active")
@@ -144,4 +145,5 @@ recordButton.addEventListener('click', () => {
 
 playButton.addEventListener('click', () => {
     onPlayRecord();
+    recordButton.classList.remove("active")
 })
