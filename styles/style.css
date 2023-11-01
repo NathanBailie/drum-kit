@@ -37,12 +37,16 @@
     border-radius: 5px;
     cursor: pointer;
     user-select: none;
+    outline: none;
+    transition: all 0.1s;
 }
 
-.button:active {
+.button:active, .button.active  {
     opacity: 0.8;
-    transform: scale(0.95);
-    border: 5px solid #525151;
+    transform: scale(0.93);
+    /* border: 5px solid #525151; */
+    border: 5px solid #f3c878;
+    box-shadow: 0 0 15px 2px #e3e3b6;
 }
 
 .letter {
