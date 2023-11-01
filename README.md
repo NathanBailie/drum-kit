@@ -6,7 +6,7 @@ An idea for this project I have found from [Link] (https://javascript30.com/). T
 ### [Link](https://nathanbailie.github.io/JavaScript-Drum-Kit/ "Click to play")
 
 ## Demo
-<img src="https://github.com/NathanBailie/JavaScript-Drum-Kit/raw/main/screenshot.PNG" width="600" />
+<img src="https://github.com/NathanBailie/JavaScript-Drum-Kit/raw/main/assets/images/screenshot.PNG" width="600" />
 
 ## Technologies
 * Html
