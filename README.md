@@ -3,9 +3,9 @@
 ## Description
 An idea for this project I have found from [Link] (https://javascript30.com/). This is a 30 day challenge where you complete 1 project each day in vanilla JavaScript. I have made additions to this project by implementing recording and playback capabilities.
 
-### [Link](https://nathanbailie.github.io/JavaScript-Drum-Kit/ "Click to play")
+### Here you can try this project on the website - [Link](https://nathanbailie.github.io/JavaScript-Drum-Kit/ "Click to play")
 
-## Demo
+## Screenshot
 <img src="https://github.com/NathanBailie/JavaScript-Drum-Kit/raw/main/assets/images/screenshot.PNG" width="600" />
 
 ## Technologies
