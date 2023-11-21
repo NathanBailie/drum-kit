@@ -1,9 +1,9 @@
 # JavaScript DrumKit
 
 ## Description
-An idea for this project I have found from [Link] (https://javascript30.com/). This is a 30 day challenge where you complete 1 project each day in vanilla JavaScript. I have made additions to this project by implementing recording and playback capabilities.
+An idea for this project I have found from a 30 day [challenge](https://javascript30.com/) where you complete 1 project each day in vanilla JavaScript. I have made additions to this project by implementing recording and playback capabilities.
 
-### Here you can try this project on the website - [Link](https://nathanbailie.github.io/JavaScript-Drum-Kit/ "Click to play")
+### Here you can try this project on the website - [Link](https://nathanbailie.github.io/JavaScript-Drum-Kit/ "Click to visit")
 
 ## Screenshot
 <img src="https://github.com/NathanBailie/JavaScript-Drum-Kit/raw/main/assets/images/screenshot.PNG" width="600" />
