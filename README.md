@@ -1,14 +1,34 @@
-# JavaScript DrumKit
+# JS Drum Kit
 
-## Description
-An idea for this project I have found from a 30 day [challenge](https://javascript30.com/) where you complete 1 project each day in vanilla JavaScript. I have made additions to this project by implementing recording and playback capabilities.
+### 🗨️ Description
 
-### Here you can try this project on the website - [Link](https://nathanbailie.github.io/JavaScript-Drum-Kit/ "Click to visit")
+A drum kit simulator built with vanilla JavaScript that allows you to play drum sounds using keyboard keys.
 
-## Screenshot
-<img src="https://github.com/NathanBailie/JavaScript-Drum-Kit/raw/main/assets/images/screenshot.PNG" width="600" />
+---
 
-## Technologies
-* Html
-* CSS (flex)
-* JavaScript (data attributes, delegating events, working with DOM)
+### 🛠️ Tech Stack
+
+- Html
+- SCSS (flex)
+- JavaScript (data attributes, delegating events, working with DOM)
+- Gulp
+
+---
+
+### 📱 Project website
+
+#### You can watch this project here - [Click!](https://nathanbailie.github.io/drum-kit/ 'Click to visit')
+
+---
+
+### 🚀 Project launch
+
+- `npm install` - install dependencies
+- `npm run dev`- lunch the project in dev mode
+- `npm run build` - performs the final build of the project
+
+---
+
+### 🏞️ Screenshots
+
+<img src="https://github.com/NathanBailie/drum-kit/raw/main/src/assets/screenshots/sc1.png" width="700" />
